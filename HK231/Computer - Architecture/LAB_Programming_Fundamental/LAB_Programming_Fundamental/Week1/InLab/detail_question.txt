@@ -1,0 +1,140 @@
+-------------------------------String-------------------------------------------------------------
+*** Bài 1:
+[English]
+Implement the function void replaceString(string s, string s1, string s2) to print the string s after replacing the last substring s1 with the s2 contained in s.
+If the string s1 is not found, keep the string s and print it.
+Hint: Refer to the string::replace function in the <string> library.
+
+
+*** Bài 2:
+[English ]
+Implement deleteWord(string s, string s1) function with function to print string s after deleting all strings s1 contained in s.
+
+
+*** Bài 3:
+[Tiếng Việt]
+Viết chương trình đọc vào chuỗi s, tìm tất cả các chuỗi con trong s mà chuỗi con chỉ có duy nhất 1 kí tự (ví dụ : aaaa, bbbb, cc, ...) và trả về độ dài của chuỗi con dài nhất.
+Đầu vào:
+Chuỗi s có độ dài ngắn nhất là 1.
+Đầu ra:
+Độ dài của chuỗi con dài nhất mà chỉ có sự xuất hiện của 1 ký tự trong chuỗi con.
+
+------------------------------------------CString-----------------------------------------------------
+*** Bài 1:
+Implement void process(const char *str, char *outstr) function which standardizes English name. The standardized name has the following features:
+1. The first character of each word must be uppercase. The remaining characters of each word must be lowercase.
+2. Only contains characters in English alphabet.
+3. There are no consecutive space characters and there is no space character at the beginning/end of the name
+- Input:
+Char * pointer to the first character of string
+- Output:
+The standardized name is written to outstr
+- Available library: <iostream>, <cstring>
+- Note: Your code MUST NOT contain any of the words in the list {"include", "string"} even in the comment
+
+*** Bài 2:
+Implement void printFirstRepeatedWord(const char str[]) function which print the first word that repeats.
+- Input:
+Char * pointer to the first character of string
+- Output:
+Print the first word that has repetition. If there is no repeated word, print "No Repetition"
+- Available library: <iostream>, <cstring>
+- Note: Your code MUST NOT contain any of the words in the list {"include", "string"} even in the comment
+
+------------------------------------------------Function----------------------------------------------
+*** Bài 1:
+[English]
+A string is a palindrome if it reads the same forward and backward. For example: "eye", "noon", "abcba", ...
+Write a function to check if a given string is a palindrome
+Input: 
+const char* str: the string to be checked. str only contains lowercase letters
+Output:
+bool: true if str is a palindrome, false otherwise
+
+
+*** Bài 2:
+[English]
+A natural number n is special if and only if n is a prime number and the sum of all the digits of n is also a prime number. Write a function that determines if a natural number is a special or not.
+Input:
+int n: a natural number n. 0 <= n <= 1000
+Output:
+bool: return true if n is special, return false otherwise
+
+
+*** Bài 3:
+[Tiếng Việt]
+Viết hàm để mã hóa và giải mã một đoạn text theo phương pháp Caesar Cipher. Để mã hoá và giải mã một chuỗi ký tự text, ta cần một tham số có giá trị nguyên là shift.
+Hàm mã hóa sẽ thay đổi từng chữ cái trong text bằng cách dịch chuyển chữ cái đó sang phải shift lần trong bảng chữ cái. Ví dụ với shift = 3. Khi đó 'a' được mã hoá thành 'd', 'b' được mã hoá thành 'e',... 'z' được mã hoá thành 'c'
+Hàm giải mã sẽ nhận một chuỗi ký tự text và giá trị nguyên shift và giải mã chuỗi ký tự này thành chuỗi ban đầu (tức dịch chuyển từng chữ cái sang trái shift lần trong bảng chữ cái)
+Đầu vào:
+char* text: chuỗi ký tự cần được mã hoá hoặc giải mã, chỉ bao gồm chữ cái thường và hoa
+int shift: giá trị dịch chuyển trong Caesar Cipher
+
+
+*** Bài 4:
+[English]
+Write a function that determines if the elements in the given array is unique
+Input:
+int* arr: array of integer
+int n: the size of the array
+Output:
+bool: return true if the elements in arr is unique, otherwise return false
+Note: arr[i] is in the range of [0, 1000]
+
+
+*** Bài 5:
+[English ]
+Given a positive decimal number as input, we need to implement function
+long int decimalToBinary(int decimal_number){}
+to convert the given positive decimal number into equivalent binary number.
+Please note that you can't using key work for, while, goto (even in variable names, comment).
+For this exercise, we have #include <iostream> and using namespace std;
+
+----------------------------------------IO-----------------------------------------------------------
+*** Bài 1:
+Write a function void uppercase(string output) to read the string S from the keyboard, then convert all characters in string S to uppercase characters and output the result to the output file.
+Note: change only lowercase letters, other characters will not change.
+Input:
+The variable "output" contains the filename used to output the result.
+Output:
+The function reads the string S from the keyboard and processes the string as described. Then write the processed string to a file whose name is contained in the variable “output” (the function does not return results).
+
+*** Bài 2:
+Write a function void uppercase(string output) to read the string S from the keyboard, then convert all characters in string S to uppercase characters and output the result to the output file.
+Note: change only lowercase letters, other characters will not change.
+Input:
+The variable "output" contains the filename used to output the result.
+Output:
+The function reads the string S from the keyboard and processes the string as described. Then write the processed string to a file whose name is contained in the variable “output” (the function does not return results).
+
+
+*** Bài 3:
+Write a function void process(string fileName) that reads a txt file, the first line consists of 2 numbers N and M separated by a space.
+N lines follow, each containing M real numbers separated by 1 space.
+Print the maximum value of each line and the maximum value of all numbers.
+Included libraries: iostream, fstream, string.
+Input:
+The variable "fileName" is the name of the file containing the input data.
+Output:
+The maximum value of each line and the maximum value of all numbers, separated by a space character.
+
+
+---------------------------------------MultiDimensional_Array-------------------------------------------
+*** Bài 1:
+English version:
+Given a two-dimensional array whose each element is integer, its size is M x N.
+Implement the following function:
+int ascendingRows(int arr[][1000], int row, int col);
+Where arr, row and col are the given two-dimensional array, its number of rows and its number of columns. A row of the given array is called as HN1 if on this row, each element's value is not higher than all elements after it. Find the number of HN1 rows of the given array.
+Note: Libraries iostream, and string have been imported, and namespace std has been used.
+
+
+*** Bài 2:
+English version:
+Given a two-dimensional array whose each element is integer, its size is M x N.
+Implement the following function:
+int primeColumns(int arr[][1000], int row, int col);
+Where arr, row and col are the given two-dimensional array, its number of rows and its number of columns. A column of the given array is called as HN2 if the sum of all elements on it is a prime number. Find the number of HN2 columns in the given array.
+Note: Libraries iostream, vector, and string have been imported, and namespace std has been used.
+
+

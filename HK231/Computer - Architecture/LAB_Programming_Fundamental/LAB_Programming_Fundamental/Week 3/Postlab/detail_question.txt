@@ -1,0 +1,103 @@
+---------------------------------------------Linked_list--------------------------------------------
+*** Bai 1:
+
+English version
+Write a program where:
+- struct node: represents a node in linkedlists
+- functions createLinkedList:
+    + Receive the size of a linked list (>0)
+    + create a linked list with value from standard input (stdin) a new node is add to the  END  of the linked list
+    + Return a pointer which points to the first node of the linked list.
+- Function evenThenOddLinkedList:
+    + Receive the linked list's head pointer
+    + The function changes the input Linked List so that the even value will be the first part of the linked list and the odd value will be the latter part. Furthermore, the order of each (even/odd) group is not changed.
+- Function main reads the size of the linked list, calls functions createLinkedList to initialize linked list, then calls function print to print the linked list.
+Complete functions evenThenOddLinkedList
+Input:
+All value from standard input (stdin) with value in (0; 5000)
+Output:
+satisfy the requirements
+
+
+
+*** Bai 2:
+
+English version
+- struct node: represents a node in linkedlists
+- functions createLinkedList:
+    + Receive the size of a linked list (>0)
+    + create a linked list with value from standard input (stdin) a new node is add to the  END  of the linked list
+    + Return a pointer which points to the first node of the linked list.
+- Function mergeList:
+    + receive 2 head1, head2 pointers of 2 linked lists
+    + Function mergeList will change the 1st linked list so that the 2nd linked list will be concatenated to the end of the 1st linked list
+- function main reads the linked list's size, calls function createLinkedList to initialize the linked list, then calls function print to print the linked list.
+Complete the functions mergeList
+Input:
+All the inputs from standard input (stdin) with value in (0; 5000)
+Output:
+Satisfy the requirements
+Write a program where:
+
+
+
+-------------------------------------------OOP--------------------------------------------------------
+*** Bai 1:
+[English]
+
+Given class template:
+template <class T> 
+class Array2D {
+	int m;
+	int n;
+	T** arr;
+}
+Class Array2D will manage a matrix with m rows and n columns. Implement following requirements:
+1. Implement the constructor with 2 parameters Array2D(int r, int c), allocating memory for a 2-dimensional array of size r x c.
+2. Implement the constructor with 3 parameters Array2D(int r, int c, T init), initialize the each element of a 2-dimensional array of size r x c with the initial value init
+3. Implement the destructor to deallocate dynamically allocated memory.
+4. Overriding operator* performs matrix multiplication with another Array2D object (notice to the matrix multiplication condition). The method returns a pointer to an object of Array2D holding the result of multiplication. In case the matrix multiplication condition is not satisfied, the method will return NULL.
+5. Overriding operator[] so that the following code can run. Assume that the data type T* has overridden the [] operator to return the value at the required position (for example, arr[i] will return the ith element of the array arr of data type T. In other words, students don't need to care about the [] operator of *arr)
+int main() {
+    Array2D<int>* p = new Array2D<int>(1, 2, 3);
+    cout << (*p)[0][1] << endl;
+    return 0;
+}
+
+
+
+*** Bai 2:
+[English]
+
+Given class template Array as below that contains an array allocated in Heap memory.
+template <typename T>
+class Array {
+public:
+    Array(int size, T initValue);
+    ~Array();
+    void setAt(int idx, const T & value);
+    T getAt(int idx);
+ 
+  void print();
+private:
+    int size;
+    T * p;
+};
+There are 2 attributes in class Array:
+p: a pointer contains the address of first element of allocated memory.
+size: number of elements of array.
+Requirement: Implement following method:
+setAt(int idx, const T & value): set value to element at position idx. If idx has an invalid value (idx < 0 or idx >= size), throw -1.
+getAt(int idx): returns value at position idx. If idx has an invalid value (idx < 0 or idx >= size), throw -1.
+
+
+*** Bai 3:
+[English]
+
+Implement class Coordinate that contains 2 attributes x and y of type int. x, y are two coordinates in Oxy.
+Implement constructor that takes two parameters x, y and assigns them to corresponding attributes x, y.
+Implement methods: setX, setY, getX, getY. Students should choose the appropriate returned type for these methods.
+Implement method distanceTo(Coordinate&) to calculate the Manhattan distance from this coordinate to the passed one. The Manhattan distance is calculated by: d = abs(x1-x2) + abs(y1-y2).
+
+
+

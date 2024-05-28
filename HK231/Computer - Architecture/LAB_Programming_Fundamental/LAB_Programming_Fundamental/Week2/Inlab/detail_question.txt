@@ -1,0 +1,138 @@
+-----------------------------------------Recursion---------------------------------------------------
+*** Bai 1:
+[English ]
+Write a recursive function
+bool checkDuplicate(int* ar,int size)
+{
+  //Implement content in function  here
+}
+to check if all elements in an array are unique (meaning there are no identical value element). I.e {1,2,3,4,5} is unique, and {1,2,3,2,5} is not unique because it has two element with value 2.
+Input:
+Function checkDuplicate will receive an integer array with value between (-109; 109) and the size in [1; 104] and array size.
+Output:
+Return true if there is no identical element, else return false
+
+*** Bai 2:
+[ English ]
+Write a recursiveSearch function that takes an array of N elements as input, and the value M. The recursiveSearch function returns the first position of the value M in the sequence (assuming this element has an index of k) and deletes the part. the element at position k out of the sequence. If not found, will return -1
+Input:
+The recursiveSearch function takes the following input values:
+Number of elements of the sequence N (0 N ≤ 108)
+The sequence of N elements arr and each element has a value in the range (0; 109)
+Number M (0 < M < 109)
+The initial call for index variable in main() is 0
+Output:
+The recursiveSearch function will return the request of the problem.
+[ Template code ]
+int recursiveSearch(int& n , int m, int arr[], int index)
+{
+   // Implement function content here
+}
+
+--------------------------------------------Pointer Basic-------------------------------------------
+
+*** Bai 1:
+
+Implement the following function:
+int calcSum(int *ptr, int n);
+Calculate and return the sum of elements of a 1-dimension array given by a pointer.
+Where:
+ptr is a pointer to the first element in the array.
+n is the size of the array.
+Note: You need to use the dereference operator (*) to get the values of the elements in the array. The subscript operator ([]) cannot be used.
+
+
+*** Bai 2:
+Implement the following function:
+void add(int *ptr, int n, int k);
+Insert element to the end of the 1-dimension array given by a pointer.
+Where:
+ptr is a pointer to the first element in the array.
+n, k respectively is the size of the array and the element that need to be added.
+
+--------------------------------------------Pointer 2----------------------------------------------
+*** Bai 1:
+English version:
+Implement the function readArray() that is declared as below syntax:
+int** readArray()
+The function reads a two-dimensional matrix each of which consists of 10 elements. These elements are entered from the keyboard (from a[0][0] to a[9][9]). If a[i][j] is assigned to 0, all remained element of the row (a[i][k], j<k<10) will automatically assigned to 0, and the function will continue to input the next-row element from the keyboard. Moreover, this function also returns a pointer which points to the two-dimensional matrix just entered.
+Input:  The positive integer matrix's elements which not surpass 1000.
+Output: The pointer that points to  the two-dimensional matrix just entered.
+
+
+*** Bai 2:
+English version:
+Implement the function void addElement(int*& arr, int n, int val, int index) that inputs a dynamic array, arr, consisting of exactly n elements and insert a value, val, into the a specific position, index.
+Input: The n-size dynamic array needs to be inserted the value, val, into the specific position, index.
+Output: The dynamic array after insert.
+Note: Insertion of elements into a dynamic array must be executed by freeing the old array and allocating new memory for the new one.
+
+*** Bai 3:
+English version:
+Implement the function int* flatten(int** matrix, int r, int c) tht returns a one-dimensional array flatten from a two-dimensional matrix of size r x c (by concating all the matrix rows).
+Input: The two-dimensional matrix of size r x c
+Output: The one-dimensional array flatten from the previous two-dimensional matrix.
+
+
+*** Bai 4:
+English version:
+Implement the function char* concatStr(char* str1, char* str2) that return a string merged from two smaller string str1 and str2.
+Input: Two string str1 and str2.
+Output: The string merged from two smaller string str1 and str2.
+Note: The string and string.h library are not allowed to use for this exercise.
+
+*** Bai 5:
+English version:
+Transposition of a two-dimensional matrix is an important term for matrix calculations in particular and linear algebra in general.
+A matrix B transposed from a matrix A that satisfied the following formula b[i][j] = a[j][i].
+Implement the function int** transposeMatrix(int** matrix, int r, int c) that perform the transposition of the matrix mentioned above.
+Input:
+The pointer that points to a two-dimensional matrix each of whose elements is in the range (-1000; 1000).
+The size of the matrix consists of the number of row r and the number of column n.
+Output: The pointer that points to transposed two-dimensional matrix. If the input matrix is empty, return the null pointer.
+
+------------------------------------------Struct--------------------------------------------------------
+*** Bai 1:
+English version:
+Struct SCP used to store information about paranormal objects is declared as below:
+struct SCP {
+    int id;
+    int objClass;
+    string speConProcedures;
+    string description;
+    string* addendums;
+    int numAddendums;
+};
+Implement the function with the following prototype:
+SCP createSCP(int id, int objClass, string speConProcedures, string description, string* addendums, int numAddendums);
+The function returns a new instance of struct SCP with the passed parameters.
+Note: Libraries iostream and string have been imported, and namespace std has been used.
+
+
+
+*** Bai 2:
+English version:
+Struct SCP used to store information about paranormal objects is declared as below:
+struct SCP {
+    int id;
+    int objClass;
+    string speConProcedures;
+    string description;
+    string* addendums;
+    int numAddendums;
+};
+Implement the function with the following prototype:
+string convertToString(SCP obj);
+The function returns a string with the following format:
+Item #: SCP-<Item number, zero-left-padded until it has 3 or more digits.>
+Object Class: <Safe if objClass is 0, Euclid if 1, Keter if 2>
+Special Containment Procedures: <The specification of the object's special containment procedures.>
+Description: <The object's description.>
+<Addendum 0>
+<Addendum 1>
+...
+<Addendum n>
+Refer to the example to understand the format.
+Note: Libraries iostream and string have been imported, and namespace std has been used.
+
+
