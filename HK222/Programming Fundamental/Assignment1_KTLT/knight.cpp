@@ -15,6 +15,9 @@ int Prime(int a){
             break;
         }
     }
+    if (a<=1)
+    return 0;
+    else 
     return check;
 }
 void adventureToKoopa(string file_input, int & HP, int & level, int & remedy, int & maidenkiss, int & phoenixdown, int & rescue) {
@@ -76,7 +79,7 @@ void adventureToKoopa(string file_input, int & HP, int & level, int & remedy, in
             sukien1_5(HP,level,phoenixdown,rescue,i,t[k],maxHP,trangthaitihon,trangthaiech,levelech,specialcharacter);
         }
         else if (t[k] == 6){
-            sukien6(HP,level,i,trangthaitihon,laptihon,trangthaiech,specialcharacter);
+            sukien6(HP,level,remedy,i,trangthaitihon,laptihon,trangthaiech,specialcharacter);
         }
         else if (t[k] == 7){
             sukien7(level,i,trangthaiech,lapech,levelech,trangthaitihon,specialcharacter);
@@ -115,7 +118,7 @@ void adventureToKoopa(string file_input, int & HP, int & level, int & remedy, in
                 level = levelech;
             }
 
-        if ((trangthaitihon == 1)&&(i == laptihon)) {
+        if ((trangthaitihon == 1)&&(i == laptihon)&&( HP > 0)) {
         HP = HP*5;
         if (HP >maxHP)
                 HP = maxHP;}
@@ -168,28 +171,35 @@ void sukien1_5 (int & HP, int & level,int & phoenixdown, int & rescue, int i,int
         else rescue = 0;
     }
 }
-void sukien6 (int & HP, int & level,int i,int & trangthaitihon, int & laptihon,int &trangthaiech,int  specialcharacter){
+void sukien6 (int & HP,int & level,int & remedy,int i,int & trangthaitihon, int & laptihon,int &trangthaiech,int  specialcharacter){
     if ((trangthaiech == 0)&&(trangthaitihon == 0)){
     int b =i % 10;
     int levelO = i > 6?(b > 5?b : 5) : b;
     if ((level > levelO)||(specialcharacter != 0)){
-        if(level < 9)
             level = level + 2;
+            if (level > 10)
+            level = 10;
     }
      else if (level < levelO) {
+        if (remedy >= 1) {
+         remedy = remedy -1;
+        }
+        else {
             trangthaitihon = 1;
             laptihon = i+3;
             if (HP <5)
             HP = 1;
             else HP = HP/5;}}
 }
+}
 void sukien7(int & level,int i,int & trangthaiech, int & lapech,int & levelech,int & trangthaitihon,int  specialcharacter){
             if ((trangthaiech == 0)&&(trangthaitihon == 0)){
             int b =i % 10;
             int levelO = i > 6?(b > 5?b : 5) : b;
             if ((level > levelO)||(specialcharacter!=0)){
-            if(level < 9)
-                level = level + 2;
+            level = level + 2;
+            if (level > 10)
+            level = 10;
                 }
             else if (level < levelO) {
                 trangthaiech =1;
@@ -374,8 +384,8 @@ void sukien13 (int & HP, int & level, int & remedy, int & maidenkiss, int & phoe
                                 trangthaiech = 0;
                                 level =levelech;}
                             }
-                                else rescue = 0;
-                                 break;
+                                else {rescue = 0;
+                                 break;}
                         }
                         }
                     else if (str[r]=='2'){
@@ -417,8 +427,8 @@ void sukien13 (int & HP, int & level, int & remedy, int & maidenkiss, int & phoe
                                 trangthaiech = 0;
                                 level =levelech;}
                             }
-                                else rescue = 0;
-                                 break;
+                                else {rescue = 0;
+                                 break;}
                         }
                         }
                     else if (str[r] =='3'){
@@ -456,11 +466,17 @@ void sukien13 (int & HP, int & level, int & remedy, int & maidenkiss, int & phoe
                                 trangthaiech = 0;
                                 level =levelech;}
                             }
-                                else rescue = 0;
-                                 break;
+                                else {rescue = 0;
+                                 break;}
                         }
                         }
                     else if (str[r]=='4') {
+                        if (n2 < 3){
+                           int max2_3x = -5;
+                           int max2_3i = -7;
+                            HP = HP - (max2_3x + max2_3i);
+                           }
+                        else if (n2 >= 3){
                         int *sodadoi =new int[n2];
                         for (int l =0;l<n2;l++){
                             sodadoi[l]=sodong2[l];
@@ -473,7 +489,7 @@ void sukien13 (int & HP, int & level, int & remedy, int & maidenkiss, int & phoe
                         int max1=sodadoi[0];
                         int max2_3x=-5,max2_3i=-7,check =0;
                         for (int l=1;l<=2;l++){
-                            if (sodadoi[l]>sodadoi[l-1]){
+                            if (sodadoi[l]>max1){
                                 max1 =sodadoi[l];
                             }
                         }
@@ -493,7 +509,13 @@ void sukien13 (int & HP, int & level, int & remedy, int & maidenkiss, int & phoe
                                 }
                             }
                         }
+                        if ((sodadoi[0] == sodadoi[1])&&(sodadoi[0]==sodadoi[2])) {
+                            max2_3x = -5;
+                            max2_3i = -7;
+                        }     
                         HP = HP - (max2_3x + max2_3i);
+                        }
+
                         if (HP >maxHP)
                             HP = maxHP;
                         if (HP <= 0){
@@ -505,8 +527,8 @@ void sukien13 (int & HP, int & level, int & remedy, int & maidenkiss, int & phoe
                                 trangthaiech = 0;
                                 level =levelech;}
                             }
-                                else rescue = 0;
-                                 break;
+                                else {rescue = 0;
+                                 break;}
                         }
                         }
             }} 

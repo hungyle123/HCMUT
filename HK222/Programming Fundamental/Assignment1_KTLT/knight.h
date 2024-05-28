@@ -7,7 +7,7 @@ void display(int HP, int level, int remedy, int maidenkiss, int phoenixdown, int
 void adventureToKoopa(string file_input, int & HP, int & level, int & remedy, int & maidenkiss, int & phoenixdown, int & rescue);
 void sukien0 (int & rescue);
 void sukien1_5 (int & HP, int & level,int & phoenixdown, int & rescue, int i,int t,int maxHP,int & trangthaitihon,int & trangthaiech,int &levelech,int  specialcharacter);
-void sukien6 (int & HP, int & level,int i,int & trangthaitihon, int & laptihon,int &trangthaiech,int specialcharacter);
+void sukien6 (int & HP, int & level,int & remedy,int i,int & trangthaitihon, int & laptihon,int &trangthaiech,int specialcharacter);
 void sukien7(int & level, int i,int & trangthaiech, int & lapech,int & levelech,int & trangthaitihon,int specialcharacter);
 void sukien11 (int & HP, int & level,int & phoenixdown, int maxHP);
 void sukien12 (int & HP);
