@@ -1,0 +1,173 @@
+---------------------------------------Linked_list-------------------------------------------------
+*** Bai 1:
+
+Write a program where:
+- struct node: represents a node in linkedlists
+- functions createLinkedList:
+    + Receive the size of a linked list (>0)
+    + create a linked list with value from standard input (stdin) a new node is add to the  END  of the linked list
+    + Return a pointer which points to the first node of the linked list.
+- Function isEqual compare two linked list:
+   + Receive the pointer head1 of the 1st linked list , pointer head2 of the 2nd linked list
+   + Return true if and only if 2 the linked lists have indentical size, and node value. Otherwise, return false.
+- Function main reads the size of the linked list, calls function createLinkedList to Initialize the linked list, then call functdion print to print all the node's values of the linked list.
+Complete function isEqual 
+Input: 
+The value input from standard input (stdin) with value in (0; 5000)
+
+
+*** Bai 2:
+
+Write a program where:
+- struct node: represents a node in linkedlists
+- functions createLinkedList:
+    + Receive the size of a linked list (>0)
+    + create a linked list with value from standard input (stdin) a new node is add to the  END  of the linked list
+    + Return a pointer which points to the first node of the linked list.
+- function countNode:
+    + Input is the head pointer of the linked list
+    + return the number of nodes in linked list
+- function main reads the size of the linked list, calls createLinkedList to Initialize the linked list, then calls print to print the linked list.
+Complete function countNode
+Input:
+n is size of the linked list (0 < n < 5000)
+n following numbers are values of each node in the linked list, each value is an integer in (-5000; 5000)
+Output:
+Satisfy the requirements
+
+
+*** Bai 3:
+
+English version:
+Write a program where:
+- struct node: represents a node in linkedlists
+- functions createLinkedList:
+    + Receive the size of a linked list (>0)
+    + create a linked list with value from standard input (stdin) a new node is add to the  First  position of the linked list
+    + Return a pointer which points to the first node of the linked list.
+- Function main reads the size of the linked list, calls function createLinkedList to Initialize the linked list, then call function print to print the linked list.
+Complete function createLinkedList
+Input:
+size n of the linked list (0 < n < 5000)
+following by n numbers, each number is a value of a node in the linked list, each number is an integer in (-5000; 5000)
+Output:
+Satisfy the requirements
+
+
+----------------------------------------------OOP-----------------------------------------------------
+
+*** Bai 1:
+
+Define a class Integer with one private variable val type int with:
+_ A constructor with one input for val.
+_ A function setValue() to change the value of val.
+_ A function getValue() to return the value of val.
+
+
+*** Bai 2:
+
+[English]
+Given the class definition:
+class ClockType
+{
+   public:
+      void setTime(int, int, int);
+      void getTime(int&, int&, int&) const;
+      void printTime() const;
+      clockType(int, int, int); //constructor with parameters
+      clockType(); //default constructor
+   private:
+      int hr;
+      int min;
+      int sec;
+};
+And the following code fragment:
+clockType myClock; 
+int hours; 
+int minutes; 
+int seconds;
+myClock.getTime(hours, minutes, seconds); 
+cout << "hours = " << hours << ", minutes = " << minutes << ", seconds = " << seconds << endl;
+
+In the statement myClock.getTime(hours, minutes, seconds); getTime member function is executed. The hr, min, and sec values of myClock object are used by the function to set the values of the three variables hours, minutes, and seconds respectively.
+Requirement: Student implements the getTime method for it to do as described above.
+Note: hr, min, sec need to satisfy the following conditions. If the input parameter does not satisfy the condition below, we assign the value 0 to the corresponding member variable:
+0 <= hr < 24
+0 <= min < 60
+0 <= sec < 60
+
+
+*** Bai 3:
+
+Define class Room with three variable length, breadth and height and:
+_ A constructor with three input for length, breadth and height.
+_ Function calculateArea to calculate and return the room area.
+_ Function calculateVolume to calculate and return the room volume.
+
+
+*** Bai 4:
+
+[English]
+Given class template Array as below that contains an array allocated in Heap memory.
+template <typename T>
+class Array {
+public:
+    Array(int size, T initValue);
+    ~Array();
+    void print();
+   void setAt(int idx, const T & value);
+   T getAt(int idx);
+   T& operator[](int idx);
+private:
+    int size;
+    T * p;
+};
+There are 2 attributes in class Array:
+p: a pointer contains the address of first element of allocated memory.
+size: number of elements of array.
+Requirement: Implement following method:
+operator[](int idx): overload operator [] to do: read (get) the value of element at position idx, and write (set) a new value to the element at position idx. For instance: read: x = a[2], write: a[2] = 5, for a is an object of class Array. if idx has an invalid value (idx < 0 or idx >= size), then throw -1;
+
+
+*** Bai 5:
+
+[English]
+Given the class definition:
+class ClockType
+{
+    public:
+       ClockType();
+       void setTime(int, int, int);
+       void printTime() const;
+    private:
+       int hr;
+       int min;
+       int sec;
+};
+And the following command:
+myClock.setTime(5, 2, 30);
+In the statement myClock.setTime(5, 2, 30); the method setTime is executed. The values 5, 2, and 30 are passed as parameters to the function setTime, and the function uses these values to set the values of the three member variables hr, min, and sec of object myClock to 5, 2, and 30, respectively.
+Requirement: Student implements the setTime method for it to do as described above.
+Note: hr, min, sec need to satisfy the following conditions. If the input parameter does not satisfy the condition below, we assign the value 0 to the corresponding member variable:
+0 <= hr < 24
+0 <= min < 60
+0 <= sec < 60
+
+
+*** Bai 6:
+[English]
+Consider the following statement:
+clockType myClock (5, 12, 40);
+This statement declares a variable name myClock belongs to type ClockType with 3 input variables. 
+Complete the constructor with 3 parameters in the class given in the answer box so that the time can be printed correctly.
+Complete the constructor with 0 parameters that set the value of three attributes to 0.
+Note: hr, min, sec need to satisfy the following conditions. If the input parameter does not satisfy the condition below, we assign the value 0 to the corresponding member variable:
+0 <= hr < 24
+0 <= min < 60
+0 <= sec < 60
+
+*** Bai 7:
+
+[English]
+In main, write a program that creates an array of Course objects with n elements (n is input from user). The array is created using dynamic allocation with operator new.
+Then input and display data for each element of array using two implemented methods: getinfo and disinfo.

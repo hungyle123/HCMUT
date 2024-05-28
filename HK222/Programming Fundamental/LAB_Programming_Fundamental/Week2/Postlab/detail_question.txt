@@ -1,0 +1,142 @@
+-----------------------------------------Recursion---------------------------------------------------
+*** Bai 1:
+[English]
+Palindrome is a string (string) that if you reverse the order of characters in the string, we still get the old string. For example: “ABCBA”, “RADAR”, “otto”, “i am ma i”, “C”.
+The palindrome function checks if a string is the given palindrome.
+a/ Write a C++ program that uses a while loop to read multiple strings and call the above function to check whether the input strings are palindrome or not. The loop will terminate when the user reads into a string starting with *.
+b/ Write a function palindromeRecursion using recursive calling technique.to check a string is palindrome or not.
+Input:
+Character strings s with a length of no more than 1000 characters
+Output:
+Each line returns the value of the palindrome and palindromeRecursion functions (see example for more details)
+Template of full code:
+#include<iostream>
+#include<string>
+using namespace std;
+/* END of library */
+bool palindrome(string strg);
+bool palindromeRecursion(string s)
+{
+    // BEGIN YOUR IMPLEMENTATION [1]
+    // TODO
+   
+    // END YOUR EMPLEMENTATION [1]
+}
+int main()
+{
+    hiddenCheck();
+    // BEGIN YOUR IMPLEMENTATION [2]
+    // TODO
+   
+    // END YOUR EMPLEMENTATION [2]
+    return 0;
+}
+
+
+
+*** Bai 2:
+[English ]
+Give an integer x, implement function
+int countWaySumOfSquare(int x)
+to find number of ways to express x as sum of squares of unique positive integers.
+For example:
+Input  : x = 100
+Output : 3
+Explain: 100 = 10^2 = 8^2 + 6^2 = 1^2 + 3^2 + 4^2 + 5^2 + 7^2
+Note: Please note that you can't using key work for, while, goto (even in variable names, comment).
+You can implement other recursive functions if needed.
+For this exercise, we have #include <iostream>, #include <math.h> and using namespace std;
+
+
+
+--------------------------------------------Pointer Basic-------------------------------------------
+
+*** Bai 1:
+
+Implement the following function:
+int findMax(int *ptr, int n);
+Find and return the maximum element of a 1-dimension array given by a pointer.
+Where:
+ptr is a pointer to the first element in the array.
+n is the size of the array.
+
+
+
+*** Bai 2:
+Implement the following function:
+void findMax(int *ptr, int n);
+Reverse the 1-dimension array given by a pointer.
+Where:
+ptr is a pointer to the first element in the array.
+n is the size of the array.
+Note: You need to use the dereference operator (*) to get the values of the elements in the array. The subscript operator ([]) cannot be used.
+
+
+*** Bai 3:
+Implement the following function:
+bool isSymmetry(int *head, int *tail);
+Checks if the 1-dimensional array is a symmetric array.
+Where:
+head, tail respectively are pointers to the first element and last element of the array.
+
+
+--------------------------------------------Pointer 2----------------------------------------------
+*** Bai 1:
+English version:
+Given a dynamic two-dimensional array of size r x c. Implement the function int** insertCol(int**& matrix, int r, int c, int* colArr, int col) that can insert the colArr array (with the size r) into the column position, col, of the matrix.
+Input: The two-dimensional matrix of size r x c, the insert column rowArr and the insert position col.
+Output: The two-dimensional matrix after insert.
+
+*** Bai 2:
+English version:
+Given a dynamic two-dimensional array of size r x c. Implement the function bool deleteRow(int**& matrix, int r, int c, int row) that can remove a row from the matrix.
+Input: The two-dimensional matrix of size r x c and the remove position row.
+Output: The two-dimensional matrix after removing the row.
+Note: If the final row of the matrix is removed, the matrix parameter will return nullptr value as well as deallocate the memory previously used by the matrix.
+
+*** Bai 3:
+English version:
+Given a dynamic two-dimensional array of size r x c. Implement the function bool deleteCol(int**& matrix, int r, int c, int col) that can remove a column from the matrix.
+Input: The two-dimensional matrix of size r x c and the remove position col.
+Output: The two-dimensional matrix after removing the column.
+Note: If the final column of the matrix is removed, the function will return nullptr value as well as deallocate the memory previously used by the matrix.
+
+
+
+------------------------------------------Struct--------------------------------------------------------
+*** Bai 1:
+English version:
+Struct SCP used to store information about paranormal objects is declared as below:
+struct SCP {
+    int id;
+    int objClass;
+    string speConProcedures;
+    string description;
+    string* addendums;
+    int numAddendums;
+};
+The objClass of each object indicates how difficult an object is to contain. The higher the value, the more resources and budget are needed to contain the object.
+int compareObjectClass(const SCP &objA, const SCP &objB);
+The function returns -1 if objA is easier to be contained than objB, 1 if objA is more difficult to be contained than objB, or 0 if the difficulties in containing two objects are equivalent.
+Note: Libraries iostream and string have been imported, and namespace std has been used.
+
+
+
+*** Bai 2:
+English version:
+Struct SCP used to store information about paranormal objects is declared as below:
+struct SCP {
+    int id;
+    int objClass;
+    string speConProcedures;
+    string description;
+    string* addendums;
+    int numAddendums;
+};
+SCP Foundation's classified archives are stored as a dynamic allocated array. However, because of some specific reason, the array is not sorted in any order.
+Implement the function with the following prototype:
+SCP** sortDatabase(SCP** arr, int n);
+Where arr is the array of SCP typed pointers, n is the length of the array. The function returns the sorted array in item number (id) increasing order.
+Note: Libraries iostream and string have been imported, and namespace std has been used.
+
+

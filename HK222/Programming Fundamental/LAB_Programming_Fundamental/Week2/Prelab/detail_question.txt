@@ -1,0 +1,159 @@
+-----------------------------------------Recursion---------------------------------------------------
+*** Bai 1:
+[English] 
+A function that finds the greatest common divisor of two positive integers can be written through simple recursion and looping. You write the function gcdRecursion to perform the greatest common divisor by recursion and the function gcdIteration to find the greatest common divisor by loop.
+Input:
+Two integers p, q respectively (1 ≤ p,q < 109).
+Output:
+The gcdRecursion and gcdIteration functions return the greatest common divisor of p, q, respectively.
+
+Template of full code:
+#include<iostream>
+#include<string>
+#include <string>
+#include <sstream>
+#include <fstream>
+#include <vector>
+using namespace std;
+
+/* END of library */
+
+
+int gcdRecursion(int p, int q)
+{
+    // BEGIN YOUR IMPLEMENTATION [1]
+    // TODO
+   
+    // END YOUR EMPLEMENTATION [1]
+}
+
+int gcdIteration(int p, int q)
+{
+    hiddenCheck();
+    // BEGIN YOUR IMPLEMENTATION [2]
+    // TODO
+   
+    // END YOUR EMPLEMENTATION [2]
+    return 0;
+}
+
+int main()
+{
+    hiddenCheck();
+    int p,q;
+    cin>>p>>q;
+    cout<<gcdRecursion(p,q)<< " "<<gcdIteration(p,q);
+    return 0;
+}
+
+
+*** Bai 2:
+[English]
+Given a string, implement function
+int strLen(char* str){}
+to calculate length of the string using recursion.
+Please note that you can't using key work for, while, goto (even in variable names, comment).
+For this exercise, we have #include <iostream> and using namespace std;
+
+
+
+*** Bai 3:
+[English ]
+Given a positive number, print following a pattern without using any loop.
+Input: n = 16
+Output: 16, 11, 6, 1, -4, 1, 6, 11, 16 (has no space at the end)
+Input: n = 10
+Output: 10, 5, 0, 5, 10 (has no space at the end)
+We basically first reduce 5 one by one until we reach a negative or 0. After we reach 0 or negative, we one add 5 until we reach n.
+Note: Please note that you can't using key work for, while, goto (even in variable names, comment).
+
+
+--------------------------------------------Pointer Basic-------------------------------------------
+
+*** Bai 1:
+
+Implement the following function:
+int getValueAtIndex(int *ptr, int k);
+Return value at the position of the index number through pointer.
+Where:
+ptr is a pointer to the first element in the array.
+k is the access position (this value does not exceed the length of the array).
+
+*** Bai 2:
+Implement the following function:
+void swap(int *ptr2, int *ptr2);
+Swap the value at the position that 2 pointers point to.
+Where:
+ptr1, ptr2 respectively are pointers to swapping positions.
+
+
+--------------------------------------------Pointer 2----------------------------------------------
+*** Bai 1:
+English version:
+Implement the function  int* zeros(int n) which can create an array with n zero element.
+Input: The array size n.
+Output: The pointer that points to the allocated array.
+Note: In the case of failed allocation, the function will return nullptr value.
+
+
+*** Bai 2:
+English version:
+Implement the function void shallowCopy(int*& newArr, int*& arr) that can create a copy from a one-dimensional array.
+Input:  The one-dimensional array that needs to be copied.
+Output: The destination array.
+Note: After finishing execution, both the one-dimensional array that needs to be copied and the destination array use the same data memory.
+
+
+*** Bai 3:
+English version:
+Implement the function int** deepCopy(int** matrix, int r, int c) that return a copy of a matrix consisting of  r rows and c colmuns.
+Input: Pointer arr points to the one-dimensional array that needs to be copied.
+Output: Pointer newArr points to the destination array.
+Note: After finishing execution, the one-dimensional array that needs to be copied and the destination array use the two distinct data memory.
+
+
+*** Bai 4:
+English version:
+Implement the function void deleteMatrix(int**& matrix, int r) that can free memory for a dynamic two-dimensional array consisting of r rows. matrix should be set to NULL after function's execution.
+Input: The dynamic two-dimensional array, matrix, consists of r rows.
+
+
+*** Bai 5:
+English version:
+Given a dynamic two-dimensional array of size r x c. Implement the function void insertRow(int**& matrix, int r, int c, int* rowArr, int row) that can insert the rowArr array (with the size c) into the row position, row, of the matrix.
+Input: The two-dimensional matrix of size r x c, the insert row rowArr and the insert position row.
+Output: The two-dimensional matrix after insert.
+
+
+------------------------------------------Struct--------------------------------------------------------
+*** Bai 1:
+English version:
+SCP Foundation's classified archives consist of records of paranormal objects. The information of each object is stored using struct SCP with following requirements:
+id: integer, the identifier (or item number) of the object.
+objClass: integer, the object class.
+speConProcedures: string, specification of the object's special containment procedures.
+description: string, description of the object.
+addendums: string*, array of addendums describing additional information about the object.
+numAddendums: integer, the number of addendums attached.
+Declare struct SCP with mentioned requirements.
+Note: Libraries iostream and string have been imported, and namespace std has been used.
+
+
+*** Bai 2:
+English version:
+Struct SCP used to store information about paranormal objects is declared as below:
+struct SCP {
+    int id;
+    int objClass;
+    string speConProcedures;
+    string description;
+    string* addendums;
+    int numAddendums;
+};
+Implement the function with the following prototype:
+void addAddendum(SCP &obj, string addendum);
+The function appends a new addendum into the array of addendums of the object obj.
+Note: Libraries iostream and string have been imported, and namespace std has been used.
+
+
+

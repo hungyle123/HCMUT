@@ -1,0 +1,181 @@
+--------------------------Cstring--------------------------------- 
+
+*Bài 1:
+Viết hàm void process(const char *str, char *outstr) loại bỏ các khoảng trắng thừa trong chuỗi sao cho không còn hai khoảng trắng liền kề nhau và không có khoảng trắng nào ở đầu và cuối chuỗi.
+- Đầu vào:
+Con trỏ char * đến kí tự đầu tiên của chuỗi
+- Đầu ra:
+Kết quả của bài toán được ghi vào chuỗi outstr
+- Các thư viện có thể dùng: <iostream>, <cstring>
+- Note: Sinh viên không được sử dụng các từ khoá sau trong đoạn code nộp bài, kể cả trong comment: "include", "string"
+---------------------------------------
+Implement void process(const char *str, char *outstr) function which eliminates redundant space characters so that there are no consecutive space characters and there is no space character at the beginning/end of string.
+- Input:
+Char * pointer to the first character of string
+- Output:
+The result is written to outstr
+- Available library: <iostream>, <cstring>
+- Note: Your code MUST NOT contain any of the words in the list {"include", "string"} even in the comment
+
+  *Bài 2:
+Viết hàm void process(const char *str, char *outstr) đảo ngược các ký tự trong chuỗi. 
+- Đầu vào:
+Con trỏ char * đến ký tự đầu tiên của chuỗi
+- Đầu ra:
+Kết quả của bài toán được ghi vào chuỗi outstr
+- Các thư viện có thể dùng: <iostream>, <cstring>
+- Note: Sinh viên không được sử dụng các từ khoá sau trong đoạn code nộp bài, kể cả trong comment: "include", "string"
+---------------------------------------
+Implement void process(const char *str, char *outstr) function which reverses the string.
+- Input:
+Char * pointer to the first character of string
+- Output:
+The result is written to outstr
+- Available library: <iostream>, <cstring>
+- Note: Your code MUST NOT contain any of the words in the list {"include", "string"} even in the comment
+
+  *Bài 3:
+Viết hàm int calc(char *str) trả về giá trị dạng thập phân của chuỗi các bit nhị phân
+- Đầu vào:
+Con trỏ char * đến phần tử đầu tiên của chuỗi
+- Đầu ra:
+Giá trị dạng thập phân của chuỗi các bit nhị phân
+- Các thư viện có thể dùng: <iostream>, <cstring>
+- Note: Sinh viên không được sử dụng các từ khoá sau trong đoạn code nộp bài, kể cả trong comment: "include", "string"
+---------------------------------------
+Implement int calc(const char *str) function which returns the decimal value of binary string str.
+- Input:
+Char * pointer to the first character of string
+- Output:
+The decimal value of binary string
+- Available library: <iostream>, <cstring>
+- Note: Your code MUST NOT contain any of the words in the list {"include", "string"} even in the comment
+
+
+--------------------------------------Classstring-------------------------------------------------------------------
+  *Bài 1:
+[Tiếng Việt]
+Hiện thực hàm cutString(string s, int index) để in ra chuỗi con của chuỗi s từ vị trí index đến hết (index tính từ 0).
+Gợi ý : Sử dụng hàm string::substr trong thư viện <string>. 
+
+
+[English ]
+Implement the function cutString(string s, int index) to print the substring of string s from index position to the end (index from 0).
+Hint:  Use the string::substr function in the <string> library.
+
+  *Bài 2:
+[Tiếng Việt ]
+Hiện thực hàm findAllIndex(string s1, string s2) để in ra tất cả các vị trí xuất hiện của kí tự đầu tiên của chuỗi s2 trong chuỗi s1. Nếu không tìm thấy in ra -1. Các vị trí tìm thấy sẽ cách nhau một khoảng trắng, sau vị trí cuối cùng, không in thêm bất kỳ ký tự nào (kể cả khoảng trắng, dấu xuống hàng)
+Gợi ý: Sử dụng hàm string::find trong thư viện <string>.
+
+[English ]
+Implement findAllIndex(string s1, string s2) to print all positions of the first character of string s2 in string s1. If not found, print -1. The found positions will be separated by a space, after the last position, do not print any more characters (including spaces, carriage returns)
+Hint:  Use the string::find function in the <string> library.
+
+-------------------------------------Multi-dimensional array---------------------------------------------------------
+  *Bài 1:
+Mô tả tiếng Việt:
+Cho mảng 2 chiều chứa các số nguyên, kích thước M x N.
+Hiện thực hàm:
+int findMaxColumn(int arr[][1000], int row, int col);
+Trong đó; arr, row và col lần lượt là mảng 2 chiều, số hàng và số cột của mảng. Tìm chỉ số của cột có tổng tất cả các phần tử lớn nhất.
+Lưu ý: Cột đầu tiên được đánh chỉ số 0. Nếu có nhiều hơn một cột có tổng lớn nhất, ta chọn cột có chỉ số lớn nhất.
+Ghi chú: (Các) thư viện iostream và climits đã được khai báo, và namespace std đã được sử dụng.
+English version:
+Given a two-dimensional array whose each element is integer, its size is M x N.
+Implement the following function:
+int findMaxColumn(int arr[][1000], int row, int col);
+Where arr, row and col are the given two-dimensional array, its number of rows and its number of columns. Find the index of the column which has the greatest sum of all elements on it.
+Note: The first column of the given array is numbered by 0. If there are more than one column whose sum is the greatest, choose the column with the greatest index.
+Note: Libraries iostream and climits have been imported, and namespace std has been used.
+
+  *Bài 2:
+Mô tả tiếng Việt:
+Cho mảng 2 chiều chứa các số nguyên, kích thước N x N.
+Hiện thực hàm:
+int diagonalProduct(int arr[][1000], int row, int col);
+Trong đó; arr, row và col lần lượt là mảng 2 chiều, số hàng và số cột của mảng. Tìm tích của tất cả các phần tử trong đường chéo chính của mảng.
+Ghi chú: (Các) thư viện iostream, và string đã được khai báo, và namespace std đã được sử dụng.
+English version:
+Given a two-dimensional array whose each element is integer, its size is N x N.
+Implement the following function:
+int diagonalProduct(int arr[][1000], int row, int col);
+Where arr, row and col are the given two-dimensional array, its number of rows and its number of columns. Find the product of all elements on the main diagonal of this array.
+Note: Libraries iostream, and string have been imported, and namespace std has been used.
+
+  *Bài 3:
+Mô tả tiếng Việt:
+Cho mảng 2 chiều chứa các số nguyên, kích thước N x N.
+Hiện thực hàm:
+bool isSymmetric(int arr[][1000], int row, int col);
+Trong đó; arr, row và col lần lượt là mảng 2 chiều, số hàng và số cột của mảng. Một ma trận được gọi là đối xứng nếu với mọi i, j; giá trị của phần tử ở hàng i, cột j luôn bằng giá trị của phần tử ở hàng j, cột i. Kiểm tra xem mảng này có phải là một ma trận đối xứng hay không; trả về true nếu mảng này là ma trận đối xứng; ngược lại, trả về false.
+Ghi chú: (Các) thư viện iostream và string đã được khai báo, và namespace std đã được sử dụng.
+English version:
+Given a two-dimensional array whose each element is integer, its size is N x N.
+Implement the following function:
+bool isSymmetric(int arr[][1000], int row, int col);
+Where arr, row and col are the given two-dimensional array, its number of rows and its number of columns. A matrix is called as symmetric matrix if for all i, j; the value of the element on row i, column j is equal to the value of the element on row j, column i. Check whether the given array is symmetric matrix or not; return true if it is, otherwise return false.
+Note: Libraries iostream and string have been imported, and namespace std has been used.
+
+  *Bài 4:
+Mô tả tiếng Việt:
+Cho mảng 2 chiều chứa các số nguyên, kích thước M x N.
+Hiện thực hàm:
+int diagonalDiff(int arr[][1000], int row, int col, int x, int y);
+Trong đó; arr, row và col lần lượt là mảng 2 chiều, số hàng, số cột của mảng; x và y biểu thị ô có số hàng là x và số cột là y trong mảng đã cho (0≤x<row và 0≤y<col). Tổng của một đường chéo là tổng tất cả các phần tử nằm trên đường chéo đó. Tìm giá trị tuyệt đối của hiệu giữa hai đường chéo đi qua ô có số hàng x và số cột y.
+Ghi chú: (Các) thư viện iostream, vector và string đã được khai báo, và namespace std đã được sử dụng.
+English version:
+Given a two-dimensional array whose each element is an integer, its size is M x N.
+Implement the following function:
+int diagonalDiff(int arr[][1000], int row, int col, int x, int y);
+Where arr, row and col are the given two-dimensional array, its number of rows and its number of columns. ; x and y represent the cell whose index of the row is x and index of the column is y (0≤x<row và 0≤y<col). The sum of a diagonal is the sum of all elements on it. Find the absolute value of the difference between the sums of two diagonal containing the cell which is represented by x and y of the given array.
+Note: Libraries iostream, vector, and string have been imported, and namespace std has been used.
+
+-------------------------------------------------I/O-----------------------------------------------------------------
+  *Bài 1:
+Viết hàm void calSum(string fileName) để tính tổng của các số nguyên không âm được đọc vào từ một file đuôi txt (các số nằm trên 1 hàng phân cách với nhau bằng một khoảng trắng).
+Đầu vào:
+Biến "fileName" là tên file dữ liệu chứa các số nguyên không âm (các số nằm trên 1 hàng phân cách với nhau bằng một khoảng trắng).
+Đầu ra:
+Một số nguyên là tổng của các số nguyên đầu vào.
+
+Write a function void calSum(string fileName) to calculate the sum of non-negative integers read from a txt file (numbers in a row separated by a space).
+Input:
+The variable "fileName" is a data file name containing non-negative integers (numbers in 1 row separated by a space).
+Output:
+An integer is the sum of the input integers.
+
+---------------------------------------------Function-----------------------------------------------------------------
+
+  *Bài 1:
+[Tiếng Việt]
+Hiện thực hàm tính giai thừa của số N, sau đó gọi hàm vừa hiện thực trong hàm main để gán kết quả tính được vào biến result.
+Đầu vào: 
+int N: số tự nhiên N
+
+  *Bài 2:
+[Tiếng Việt]
+Viết hàm findMax để tìm giá trị lớn nhất trong mảng số nguyên.
+Đầu vào:
+int* vals: mảng số nguyên 
+int numEls: số phần tử trong mảng vals
+Đầu ra:
+int: giá trị lớn nhất có trong mảng vals
+
+  *Bài 3:
+[Tiếng Việt]
+Viết hàm sum2 để tính tổng giá trị các phần tử trong mảng số nguyên.
+Tham số:
+int* array: mảng số nguyên
+int size: số phần tử trong mảng
+int& result: tham số để lưu kết quả cuối cùng sau khi tính toán
+
+  *Bài 4:
+[Tiếng Việt]
+Viết hàm bool completeNum(int N) để kiểm tra xem số nguyên dương N có phải là một số hoàn thiện hay không. N là một số hoàn thiện nếu N bằng tổng tất cả ước số nguyên dương (không bao gồm chính nó) của nó.
+Đầu vào: 
+int N: số nguyên dương N cần kiểm tra
+Đầu ra:
+bool: trả về true nếu N là số hoàn thiện, ngược lại trả về false
+
+  
