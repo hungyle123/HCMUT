@@ -1,0 +1,301 @@
+3.1,3.2
+void setup(){
+  pinMode(9,OUTPUT);
+  pinMode(10,OUTPUT);
+}
+void left_motor(int speed){
+  if (speed > 0) {
+
+  analogWrite(9,HIGH);
+  digitalWrite(9,speed);
+  digitalWrite(10,LOW);}
+  else {
+    speed = 0 - speed;
+    digitalWrite(9,LOW);
+    digitalWrite(10,HIGH);
+  analogWrite(10,speed);
+  }
+}
+void loop() {
+  left_motor(200);
+  delay(2000);
+  left_motor(0);
+  delay(2000);
+  left_motor(-200);
+  delay(2000);
+}
+3.3
+void setup(){
+  pinMode(9,OUTPUT);
+  pinMode(10,OUTPUT);
+  pinMode(11,OUTPUT);
+  pinMode(12,OUTPUT);
+}
+void right_motor(int speed){
+  if (speed > 0) {
+
+  analogWrite(11,HIGH);
+  digitalWrite(11,speed);
+  digitalWrite(12,LOW);}
+  else {
+    speed = 0 - speed;
+    digitalWrite(11,LOW);
+    digitalWrite(12,HIGH);
+  analogWrite(12,speed);
+  }
+}
+void loop() {
+  right_motor(200);
+  delay(2000);
+  right_motor(0);
+  delay(2000);
+  right_motor(-200);
+  delay(2000);
+}
+3.4,3.5
+void setup(){
+  pinMode(9,OUTPUT);
+  pinMode(10,OUTPUT);
+  pinMode(11,OUTPUT);
+  pinMode(12,OUTPUT);
+}
+void right_motor(int speed){
+  if (speed > 0) {
+
+  analogWrite(11,HIGH);
+  digitalWrite(11,speed);
+  digitalWrite(12,LOW);}
+  else {
+    speed = 0 - speed;
+    digitalWrite(11,LOW);
+    digitalWrite(12,HIGH);
+  analogWrite(12,speed);
+  }
+}
+  void left_motor(int speed){
+     if (speed > 0) {
+
+  analogWrite(9,HIGH);
+  digitalWrite(9,speed);
+  digitalWrite(10,LOW);}
+  else {
+     speed = 0 - speed;
+     digitalWrite(9,LOW);
+    digitalWrite(10,HIGH);
+ analogWrite(10,speed);
+ }
+}
+ void forward (int speed ) {
+  left_motor(speed);
+    right_motor(speed);
+}
+
+void backward(int speed ) {
+  left_motor(-speed);
+    right_motor(-speed);
+}
+void turnleft (int speed ) {
+  left_motor(0);
+    right_motor(speed);
+}
+void turnright (int speed ) {
+  left_motor(speed);
+    right_motor(0);
+}
+
+void loop() {
+  turnleft ( 200);
+}
+4.1
+void setup () {
+ Serial . begin (115200) ;
+ Serial . println (" Hello TinkerCad ") ;
+ }
+void loop () {
+ if( Serial . available () )
+ {
+ char temp = Serial . read () ;
+ Serial . print ("I received : ") ;
+ Serial . println ( temp );
+ 
+ 
+ if (temp=='O')
+ digitalWrite(13, HIGH);
+ else
+ digitalWrite(13, LOW);
+ }}
+4.2
+void setup () {
+ Serial . begin (115200) ;
+ Serial . println (" Hello TinkerCad ") ;
+ }
+void loop () {
+ if( Serial . available () )
+ {
+ char temp = Serial . read () ;
+ Serial . print ("I received : ") ;
+ Serial . println ( temp );
+ 
+ 
+ if (temp=='O')
+ digitalWrite(13, HIGH);
+ else if (temp=='F')
+ digitalWrite(13, LOW);
+ }}
+
+4.3
+void setup () {
+ Serial.begin (9600) ;
+ pinMode(9,OUTPUT);
+ pinMode(10,OUTPUT);
+ pinMode(11,OUTPUT);
+ pinMode(12,OUTPUT);
+ }
+ void right_motor(int speed){
+ if (speed > 0) {
+
+ analogWrite(11,HIGH);
+ digitalWrite(11,speed);
+ digitalWrite(12,LOW);}
+ else {
+ speed = 0 - speed;
+ digitalWrite(11,LOW);
+ digitalWrite(12,HIGH);
+ analogWrite(12,speed);
+ }
+}
+ void left_motor(int speed){
+if (speed > 0) {
+
+ analogWrite(9,HIGH);
+ digitalWrite(9,speed);
+ digitalWrite(10,LOW);}
+ else {
+  speed = 0 - speed;
+   digitalWrite(9,LOW);
+  digitalWrite(10,HIGH);
+analogWrite(10,speed);
+}
+}
+void forward (int speed ) {
+ left_motor(speed);
+ right_motor(speed);
+}
+
+void backward(int speed ) {
+ left_motor(-speed);
+  right_motor(-speed);
+}
+void turnleft (int speed ) {
+ left_motor(0);
+  right_motor(speed);
+}
+void turnright (int speed ) {
+ left_motor(speed);
+  right_motor(0);
+}
+void loop () {
+ if( Serial.available () )
+ {
+ String temp = Serial.readString () ;
+ Serial.print ("I received : ") ;
+ Serial.println (temp);
+ 
+ 
+ if (temp=="W\n")
+ forward(200);
+ else if (temp=="S\n")
+ backward(200);
+ else if (temp=="A\n")
+ turnleft(200);
+ else if (temp=="D\n")
+ turnright(200);
+ else{
+ digitalWrite(9,LOW);
+ digitalWrite(10,LOW);
+ digitalWrite(11,LOW);
+ digitalWrite(12,LOW);}
+ }}
+
+4.4
+void setup () {
+ Serial.begin (9600) ;
+ pinMode(9,OUTPUT);
+ pinMode(10,OUTPUT);
+ pinMode(11,OUTPUT);
+ pinMode(12,OUTPUT);
+ pinMode(13,OUTPUT);
+ }
+ void right_motor(int speed){
+ if (speed > 0) {
+
+ analogWrite(11,HIGH);
+ digitalWrite(11,speed);
+ digitalWrite(12,LOW);}
+ else {
+ speed = 0 - speed;
+ digitalWrite(11,LOW);
+ digitalWrite(12,HIGH);
+ analogWrite(12,speed);
+ }
+}
+ void left_motor(int speed){
+if (speed > 0) {
+
+ analogWrite(9,HIGH);
+ digitalWrite(9,speed);
+ digitalWrite(10,LOW);}
+ else {
+  speed = 0 - speed;
+   digitalWrite(9,LOW);
+  digitalWrite(10,HIGH);
+analogWrite(10,speed);
+}
+}
+void forward (int speed ) {
+ left_motor(speed);
+ right_motor(speed);
+ digitalWrite(13,LOW);
+}
+
+void backward(int speed ) {
+ left_motor(-speed);
+  right_motor(-speed);
+  digitalWrite(13,LOW);
+}
+void turnleft (int speed ) {
+ left_motor(0);
+  right_motor(speed);
+  digitalWrite(13,HIGH);
+}
+void turnright (int speed ) {
+ left_motor(speed);
+  right_motor(0);
+  digitalWrite(13,HIGH);
+}
+void loop () {
+ if( Serial.available () )
+ {
+ String temp = Serial.readString () ;
+ Serial.print ("I received : ") ;
+ Serial.println (temp);
+ 
+ 
+ if (temp=="W\n")
+ forward(200);
+ else if (temp=="S\n")
+ backward(200);
+ else if (temp=="A\n"){
+ turnleft(200);
+}
+ else if (temp=="D\n"){
+ turnright(200);
+}
+ else{
+ digitalWrite(9,LOW);
+ digitalWrite(10,LOW);
+ digitalWrite(11,LOW);
+ digitalWrite(12,LOW);
+digitalWrite(13,LOW);
+ }}}
+
